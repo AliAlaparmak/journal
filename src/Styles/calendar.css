@@ -1,0 +1,103 @@
+
+:root {
+  --cell: clamp(70px, 8vw, 110px);
+  --cell-h: calc(var(--cell) * 105 / 110);
+}
+
+#calendar {
+  background-color: rgb(110, 108, 105);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  padding-bottom: 80px;
+}
+
+#CalendarHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  height: 110px;
+}
+
+#CurrentMonth {
+  width: 300px;
+  font-size: 40px;
+}
+
+#CalendarBody {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(150, 143, 140);
+  gap: 6px; 
+}
+
+.DOTW {
+  display: grid;
+  grid-template-columns: repeat(7, var(--cell));
+  font-size: 20px;
+}
+
+.EDOTW {
+  border: 2px solid black;
+  background-color: rgb(184, 171, 171);
+  box-sizing: border-box;
+  height: var(--cell-h);  
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+}
+
+#CalendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, var(--cell));
+  grid-auto-rows: var(--cell-h);
+}
+
+#CalendarGrid > * {
+  border: 1px solid black; 
+  box-sizing: border-box;
+  background-color: #ddd;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 20px;
+}
+
+.calendarSquare {
+  background-color: rgb(197, 196, 196);
+
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  font-size: 30px;
+  border-width: 2px;
+  position: relative;
+}
+
+
+.calendarSquare.has-entry::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgb(56, 56, 56);
+}
+
+
+.calendarSquare:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(107, 107, 107);
+  transition: all 0.15s ease-in-out;
+}

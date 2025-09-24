@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Journal</title>
+
+    <link rel="stylesheet" href="Styles/body.css" />
+    <link rel="stylesheet" href="Styles/entry.css" />
+    <link rel="stylesheet" href="Styles/calendar.css"/>
+
+    <script type="module" src="script.js"></script>
+    
+  </head>
+  <body>
+    <div id="calendar">
+      <div id="CalendarHeader">
+        <button class="ButtonsLR" onclick="renderTime({ month:-1 })">&#8592; </button>
+        <span id = "CurrentMonth"></span>
+        <button class="ButtonsLR" onclick="renderTime({ month:1 })">&#8594; </button>
+      </div>
+      <div id = CalendarBody>
+        <div class="DOTW">
+          <div class ="EDOTW">Sunday</div>
+          <div class ="EDOTW">Monday</div>
+          <div class ="EDOTW">Tuesday</div>
+          <div class ="EDOTW">Wednesday</div>
+          <div class ="EDOTW">Thursday</div>
+          <div class ="EDOTW">Friday</div>
+          <div class ="EDOTW">Saturday</div>
+        </div>
+        <div id ="CalendarGrid"></div>
+      </div>
+    </div>
+
+    <div id="entry">
+      <div id="EntryHeader">
+        <span id="EntryDate"></span>
+        <button id="submitButton">Submit</button>
+      </div>
+      <div id="EntryBody">
+        <textarea id="JournalEntryINP" placeholder="dear future me..."></textarea>
+      </div>
+    </div>
+
+
+  </body>
+</html>
