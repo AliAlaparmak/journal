@@ -31,7 +31,8 @@ A minimal journaling app with a built-in calendar. Each day in the calendar link
 
 ## Screenshots
 ### Calendar View
-![Calendar Screenshot](docs\calendar.png)
+![Calendar Screenshot](docs/calendar.png)
+
 
 ## Usage
 1. Clone this repo:  
